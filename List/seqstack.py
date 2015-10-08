@@ -3,7 +3,7 @@
 
 class SeqStack(object):
     """docstring for Stack"""
-    def __init__(self,datas=[]):
+    def __init__(self, datas=[]):
         self.array = datas
         self.bottom = 0
         self.top = len(datas) - 1
