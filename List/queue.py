@@ -3,7 +3,7 @@
 class SeqQueue(object):
     """ Queue """
     def __init__(self, datas=[], max_length=0):
-        self.queue_array = datas
+        self.array = datas
         self.max_length = max_length
         self.front = 0
         self.rear = 0
@@ -13,7 +13,7 @@ class SeqQueue(object):
 
     def __repr__(self):
         reprstr = ''
-        for i in self.queue_array:
+        for i in self.array:
             reprstr += str(i) + ' | '
         return reprstr
 
@@ -28,12 +28,14 @@ class SeqQueue(object):
         #if self.rear == self.max_length - 1
 
     def insert(self, data):
-        self.queue_array[self.rear] = data
+        for i in range(len(self.array)):
+            
+        self.array[self.rear] = data
         self.rear += 1
         return self
 
     def delete(self, data):
-        del self.queue_array[self.front]
+        del self.array[self.front]
         self.front += 1
         return self
 

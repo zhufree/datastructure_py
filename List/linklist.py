@@ -235,6 +235,8 @@ def merge_linklist(list_a, list_b):
         c.next = b
     return list_c
 
+    def reverse(self):
+        pass
 
 if __name__ == '__main__':
     intdatas_1 = range(15, 0, -3)

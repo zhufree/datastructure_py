@@ -181,6 +181,7 @@ class DulList(LinkList):
 if __name__ == '__main__':
     chardatas = ['a', 'b', 'c', 'd', 'e', 'a', 'c', 'c', 'g', 'd']
     dullist = DulList(chardatas)
+    print dullist
     dullist.insertData(5, 'k')
     print dullist
     dullist.deleteData_by_index(6)
