@@ -238,6 +238,48 @@ def merge_linklist(list_a, list_b):
     def reverse(self):
         pass
 
+
+class CirList(LinkList):
+    """docstring for CirList"""
+
+    def create_by_head(self, datas):
+        """
+        create a LinkList by using data in datas(a list)
+        every data will be added at the head of the list
+        """
+        self.clear()
+        self.head = Node(datas[0])
+        for i in datas[1:]:
+            cur_node = Node(i)
+            cur_node.next = self.head
+            self.head = cur_node
+        p = self.head
+        while p.next:
+            p = p.next
+        p.next = self.head
+
+    def create_by_tail(self, datas):
+        """
+        create a LinkList by using data in datas(a list)
+        every data will be added at the tail of the list
+        """
+        self.clear()
+        self.head = Node(datas[0])
+        p = self.head
+        for i in datas[1:]:
+            cur_node = Node(i)
+            p.next = cur_node
+            p = p.next
+        p.next = self.head
+
+    def is_empty(self):
+        """ whether the list is empty """
+        if self.head.next == self.head:
+            return True
+        else:
+            return False
+        
+
 if __name__ == '__main__':
     intdatas_1 = range(15, 0, -3)
     intdatas_2 = range(0, 20, 4)
