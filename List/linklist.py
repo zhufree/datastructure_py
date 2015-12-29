@@ -240,7 +240,7 @@ def merge_linklist(list_a, list_b):
 
 
 class CirList(LinkList):
-    """docstring for CirList"""
+    """CirList"""
 
     def create_by_head(self, datas):
         """
